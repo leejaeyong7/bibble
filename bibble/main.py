@@ -136,6 +136,8 @@ def _month_match(mon):
 def _month_name(monthnum):
     """Turn a month number into a month name."""
     try:
+        if(not monthnum):
+            monthnum = 0
         return month_name[int(monthnum)]
     except (ValueError, KeyError):
         return ''
